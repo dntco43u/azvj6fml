@@ -10,9 +10,6 @@ import org.springframework.boot.test.context.SpringBootTest;
 import com.fhy8vp3u.auzj6fml.domain.SampleBoardDTO;
 import com.fhy8vp3u.auzj6fml.mapper.SampleBoardMapper;
 
-import lombok.extern.slf4j.Slf4j;
-
-@Slf4j
 @SpringBootTest
 class SampleBoardTests {
   @Autowired
