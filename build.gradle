@@ -52,7 +52,7 @@ dependencies {
 }
 
 /*
-XXX: jenkins build 실패로 인한 임시 삭제 
+XXX: Temporary deletion due to Jenkins build failure
 tasks.named('test') {
 	useJUnitPlatform()
 }

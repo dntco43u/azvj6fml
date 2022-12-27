@@ -45,6 +45,3 @@ application-security.properties
 
 # documents
 /doc
-
-# vue.js
-/front

@@ -22,7 +22,7 @@ public class SwaggerConfig {
   @Bean
   public Docket swaggerApi(ServletContext servletContext) {
     return new Docket(DocumentationType.SWAGGER_2).consumes(getConsumeContentTypes()).produces(getProduceContentTypes())
-        .apiInfo(swaggerInfo()).groupName("auzj6fmlGroup").select()
+        .apiInfo(swaggerInfo()).groupName("auzj6fml").select()
         .apis(RequestHandlerSelectors.basePackage("com.fhy8vp3u.auzj6fml.controller")).paths(PathSelectors.ant("/**"))
         .build().useDefaultResponseMessages(false);
   }
@@ -41,6 +41,6 @@ public class SwaggerConfig {
   }
 
   private ApiInfo swaggerInfo() {
-    return new ApiInfoBuilder().title("auzj6fmlTitle").description("auzj6fmlDesc").build();
+    return new ApiInfoBuilder().title("auzj6fml-api").description("").build();
   }
 }

@@ -7,20 +7,20 @@ import org.junit.jupiter.api.Test;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.context.SpringBootTest;
 
-import com.fhy8vp3u.auzj6fml.domain.SampleDTO;
-import com.fhy8vp3u.auzj6fml.mapper.SampleMapper;
+import com.fhy8vp3u.auzj6fml.domain.SampleBoardDTO;
+import com.fhy8vp3u.auzj6fml.mapper.SampleBoardMapper;
 
 @SpringBootTest
 class Auzj6fmlApplicationTests {
   @Autowired
-  private SampleMapper sampleMapper;
+  private SampleBoardMapper sampleBoardMapper;
 
   void contextLoads() throws Exception {
   }
 
   @Test
   void select001() throws Exception {
-    List<SampleDTO> resList = sampleMapper.select001();
+    List<SampleBoardDTO> resList = sampleBoardMapper.select001();
     Assertions.assertNotNull(resList);
   }
 }

@@ -7,9 +7,11 @@ import lombok.ToString;
 @Getter
 @Setter
 @ToString
-public class SampleDTO {
+public class SampleBoardDTO {
   private Integer id;
-  private String content;
+  private String title;
+  private String contents;
+  private String author;
   private String createUser;
   private String createTime;
   private String updateUser;
