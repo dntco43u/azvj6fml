@@ -81,8 +81,8 @@ CipherString = ECDHE-RSA-AES256-GCM-SHA384:ECDHE-RSA-CHACHA20-POLY1305:ECDHE-ARI
 ```
 
 Finally, check nginx settings.<br>
-[Test in ssllabs](https://www.ssllabs.com/ssltest/analyze.html?d=au.gvp6nx1a.ml&hideResults=on&latest)<br>
-[Test in ssllabs (Mirror site)](https://www.ssllabs.com/ssltest/analyze.html?d=au.ec4mrjp5.ml&hideResults=on&latest)<br>
+[Test in ssllabs](https://www.ssllabs.com/ssltest/analyze.html?d=au.gvp6nx1a.ml&hideResults=on&latest){:target="_blank" rel="noopener"}<br>
+[Test in ssllabs (Mirror site)](https://www.ssllabs.com/ssltest/analyze.html?d=au.ec4mrjp5.ml&hideResults=on&latest){:target="_blank" rel="noopener"}<br>
 
 > Note: In the case of SSL via cloudflare, it is difficult to get a good score because it includes CBC encryption. nginx direct SSL with the configuration set above can get top marks, but it's at a disadvantage in security except for SSL.<br><br>
 > SSL via nginx<br>
