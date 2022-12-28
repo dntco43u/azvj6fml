@@ -84,6 +84,10 @@ Finally, check nginx settings.<br>
 [Test in ssllabs](https://www.ssllabs.com/ssltest/analyze.html?d=au.gvp6nx1a.ml&hideResults=on&latest){:target="_blank" rel="noopener"}<br>
 [Test in ssllabs (Mirror site)](https://www.ssllabs.com/ssltest/analyze.html?d=au.ec4mrjp5.ml&hideResults=on&latest){:target="_blank" rel="noopener"}<br>
 
+
+[go](http://stackoverflow.com){:target="_blank" rel="noopener"}
+
+
 > Note: In the case of SSL via cloudflare, it is difficult to get a good score because it includes CBC encryption. nginx direct SSL with the configuration set above can get top marks, but it's at a disadvantage in security except for SSL.<br><br>
 > SSL via nginx<br>
 > ![auzj6fml_1](https://user-images.githubusercontent.com/116544940/209469327-f9ba4bbf-75a6-4a1e-a97d-a5f33b956790.png)
