@@ -49,7 +49,7 @@ public class SampleBoardController {
   }
 
   @ApiOperation(value = "SampleBoard UpdateOne", notes = "")
-  @PatchMapping(value = "/api/sampleboard")
+  @PatchMapping(value = "/api/sampleboard/{id}")
   public SampleBoardEntity update001(@RequestBody SampleBoardDTO reqDTO) {
     return sampleBoardService.update001(reqDTO);
   }
