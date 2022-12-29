@@ -1,4 +1,4 @@
-package com.fhy8vp3u.auzj6fml.util;
+package com.fhy8vp3u.auzj6fml.config;
 
 import java.util.HashSet;
 import java.util.Set;
@@ -21,10 +21,16 @@ import springfox.documentation.swagger2.annotations.EnableSwagger2;
 public class SwaggerConfig {
   @Bean
   public Docket swaggerApi(ServletContext servletContext) {
-    return new Docket(DocumentationType.SWAGGER_2).consumes(getConsumeContentTypes()).produces(getProduceContentTypes())
-        .apiInfo(swaggerInfo()).groupName("auzj6fml").select()
-        .apis(RequestHandlerSelectors.basePackage("com.fhy8vp3u.auzj6fml.controller")).paths(PathSelectors.ant("/**"))
-        .build().useDefaultResponseMessages(false);
+    return new Docket(DocumentationType.SWAGGER_2)
+    .consumes(getConsumeContentTypes())
+    .produces(getProduceContentTypes())
+    .apiInfo(swaggerInfo())
+    .groupName("auzj6fml")
+    .select()
+    .apis(RequestHandlerSelectors.basePackage("com.fhy8vp3u.auzj6fml.controller"))
+    .paths(PathSelectors.ant("/**"))
+    .build()
+    .useDefaultResponseMessages(false);
   }
 
   private Set<String> getConsumeContentTypes() {
@@ -41,6 +47,9 @@ public class SwaggerConfig {
   }
 
   private ApiInfo swaggerInfo() {
-    return new ApiInfoBuilder().title("auzj6fml-api").description("").build();
+    return new ApiInfoBuilder()
+    .title("auzj6fml-api")
+    .description("")
+    .build();
   }
 }

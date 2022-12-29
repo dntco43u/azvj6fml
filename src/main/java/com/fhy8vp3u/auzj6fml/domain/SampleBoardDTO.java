@@ -1,14 +1,16 @@
 package com.fhy8vp3u.auzj6fml.domain;
 
-import lombok.Getter;
-import lombok.Setter;
-import lombok.ToString;
+import lombok.AllArgsConstructor;
+import lombok.Builder;
+import lombok.Data;
+import lombok.NoArgsConstructor;
 
-@Getter
-@Setter
-@ToString
+@Data
+@AllArgsConstructor
+@NoArgsConstructor
+@Builder
 public class SampleBoardDTO {
-  private Integer id;
+  private Long id;
   private String title;
   private String contents;
   private String author;
