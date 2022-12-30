@@ -10,7 +10,7 @@ import com.fhy8vp3u.auzj6fml.entity.SampleBoardEntity;
 import com.fhy8vp3u.auzj6fml.service.SampleBoardService;
 
 @SpringBootTest
-class Auzj6fmlApplicationTests {
+class SampleBoardTests {
   @Autowired
   private SampleBoardService sampleBoardService;
 
