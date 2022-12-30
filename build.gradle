@@ -64,7 +64,7 @@ clean.doLast {
 //XXX: Temporary deletion due to Jenkins build failure
 //tasks.named('test') {
 //	useJUnitPlatform()
-/}
+//}
 
 tasks.named('jar') {
   enabled = false
