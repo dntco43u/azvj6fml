@@ -25,7 +25,7 @@ public class SwaggerConfig {
     .consumes(getConsumeContentTypes())
     .produces(getProduceContentTypes())
     .apiInfo(swaggerInfo())
-    .groupName("auzj6fml")
+    .groupName("auzj6fml")  
     .select()
     .apis(RequestHandlerSelectors.basePackage("com.fhy8vp3u.auzj6fml.controller"))
     .paths(PathSelectors.ant("/**"))
@@ -36,7 +36,7 @@ public class SwaggerConfig {
   private Set<String> getConsumeContentTypes() {
     Set<String> consumes = new HashSet<>();
     consumes.add("application/json;charset=UTF-8");
-    consumes.add("application/x-www-form-urlencoded");
+    //consumes.add("application/x-www-form-urlencoded");
     return consumes;
   }
 
