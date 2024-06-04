@@ -8,7 +8,7 @@
     </layout>
   </appender>
   <appender name="DAILY_ROLLING_FILE_APPENDER" class="ch.qos.logback.core.rolling.RollingFileAppender">
-    <file>${LOGS_PATH}/auzj6fml.log</file>
+    <file>${LOGS_PATH}/azvj6fml.log</file>
     <encoder>
       <pattern>[%d{yyyy-MM-dd HH:mm:ss}:%-3relative][%thread] %-5level %logger{35} - %msg%n</pattern>
     </encoder>
