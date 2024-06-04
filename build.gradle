@@ -8,11 +8,6 @@ group = 'com.fhy8vp3u'
 version = '0.0.1-SNAPSHOT'
 sourceCompatibility = '17'
 
-configurations {
-  compileOnly {
-    extendsFrom annotationProcessor
-  }
-}
 
 repositories {
 	mavenCentral()
@@ -48,6 +43,11 @@ dependencies {
   implementation 'org.springframework.boot:spring-boot-starter-security'
   implementation 'javax.validation:validation-api:2.0.1.Final'
   implementation 'com.auth0:java-jwt:3.14.0'
+
+  compileOnly 'org.projectlombok:lombok:1.18.20'
+  annotationProcessor 'org.projectlombok:lombok:1.18.20'
+  testCompileOnly 'org.projectlombok:lombok:1.18.20' // 테스트 의존성 추가
+  testAnnotationProcessor 'org.projectlombok:lombok:1.18.20' // 테스트 의존성 추가
 }
 
 def generated='src/main/generated'
@@ -69,3 +69,4 @@ clean.doLast {
 tasks.named('jar') {
   enabled = false
 }
+
