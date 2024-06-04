@@ -1,4 +1,4 @@
-# auzj6fml
+# azvj6fml
 <div align=left> 
   <img src="https://img.shields.io/badge/oracle-F80000?style=flat-square&logo=oracle&logoColor=white">
   <img src="https://img.shields.io/badge/hibernate-59666C?style=flat-square&logo=hibernate&logoColor=white">
@@ -87,9 +87,9 @@ Finally, check nginx settings.<br>
 
 > Note: In the case of SSL via cloudflare, it is difficult to get a good score because it includes CBC encryption. nginx direct SSL with the configuration set above can get top marks, but it's at a disadvantage in security except for SSL.<br><br>
 > SSL via nginx<br>
-> ![auzj6fml_1](https://user-images.githubusercontent.com/116544940/209469327-f9ba4bbf-75a6-4a1e-a97d-a5f33b956790.png)
+> ![azvj6fml_1](https://user-images.githubusercontent.com/116544940/209469327-f9ba4bbf-75a6-4a1e-a97d-a5f33b956790.png)
 > SSL via cloudflare<br>
-> ![auzj6fml_2](https://user-images.githubusercontent.com/116544940/209469323-f818c982-2d11-4151-8bc3-5ae9598bb86e.png)
+> ![azvj6fml_2](https://user-images.githubusercontent.com/116544940/209469323-f818c982-2d11-4151-8bc3-5ae9598bb86e.png)
 
 * * *
 
@@ -100,9 +100,9 @@ It can be used as docker build, but since it is a development environment, it is
 ```yml
 version: "3.8"
 services:
-  auzj6fml:
+  azvj6fml:
     image: openjdk:17-jdk
-    container_name: auzj6fml
+    container_name: azvj6fml
     user: 1000:1000
     networks:
       gvp6nx1a:
@@ -113,11 +113,11 @@ services:
       - TZ=Asia/Seoul
       - JAVA_OPTS=-Xmx1g
     volumes:
-      - /data/auzj6fml/dockerfile/build/libs:/usr/share/java:rw
-      - /data/auzj6fml/config:/config:rw
-      - /data/auzj6fml/data:/data:rw
-      - /data/auzj6fml/log:/log:rw
-    command: java -jar /usr/share/java/auzj6fml-0.0.1-SNAPSHOT.jar
+      - /data/azvj6fml/dockerfile/build/libs:/usr/share/java:rw
+      - /data/azvj6fml/config:/config:rw
+      - /data/azvj6fml/data:/data:rw
+      - /data/azvj6fml/log:/log:rw
+    command: java -jar /usr/share/java/azvj6fml-0.0.1-SNAPSHOT.jar
     restart: always
 networks:
   gvp6nx1a:
@@ -132,9 +132,9 @@ log_file=/tmp/pre_build.log
 {
   echo "$0"
   echo "$1 #$2"
-  mkdir -p var/jenkins_home/workspace/auzj6fml/src/main/resources
+  mkdir -p var/jenkins_home/workspace/azvj6fml/src/main/resources
   mkdir -p var/jenkins_home/workspace/bdkqpr0x/src/main/resources
-  cp -f -v /var/jenkins_home/config/profiles/auzj6fml/application-security.properties /var/jenkins_home/workspace/auzj6fml/src/main/resources
+  cp -f -v /var/jenkins_home/config/profiles/azvj6fml/application-security.properties /var/jenkins_home/workspace/azvj6fml/src/main/resources
   cp -f -v /var/jenkins_home/config/profiles/bdkqpr0x/application-security.properties /var/jenkins_home/workspace/bdkqpr0x/src/main/resources
 } > $log_file
 log=$(< $log_file tail -c 4096)
@@ -152,8 +152,8 @@ log_file=/tmp/post_build.log
   hostname -f
   echo "$0"
   echo "$1 #$2"
-  ls -alh /data/auzj6fml/dockerfile/build/libs/*.jar
-  cd /data/auzj6fml || exit 1
+  ls -alh /data/azvj6fml/dockerfile/build/libs/*.jar
+  cd /data/azvj6fml || exit 1
   sudo docker-compose rm -f -s
   sudo docker-compose up -d
 } > $log_file
@@ -169,7 +169,7 @@ fi
 ### How to use
 It runs in a docker container and deploys to jenkins. Same as batch program.
 ```sh
-sudo cd /data/auzj6fml && sudo docker-compose rm -f -s && sudo docker-compose up -d && sudo docker exec -it auzj6fml date
+sudo cd /data/azvj6fml && sudo docker-compose rm -f -s && sudo docker-compose up -d && sudo docker exec -it azvj6fml date
 ```
 
 * * *
