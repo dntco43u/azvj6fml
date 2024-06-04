@@ -17,7 +17,7 @@ import lombok.NoArgsConstructor;
 @AllArgsConstructor
 @NoArgsConstructor
 @Builder
-@Table(name = "USER_LOG", schema = "CQA7WTJG")
+@Table(name = "USER_LOG", schema = "DEV")
 @Entity
 public class UserLogEntity {
   @Id
